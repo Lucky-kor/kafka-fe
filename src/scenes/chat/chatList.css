@@ -1,0 +1,171 @@
+.sidebar2 {
+    width: 50%;
+    border: 1px solid #ddd;
+    padding: 0;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffb121;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 71px;
+    border-radius: 5px 5px 0 0;
+  }
+  .tab-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon-buttons2 {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+  }
+  .icon-button{
+    background-color: transparent;
+    border: none;
+    font-weight: normal;
+  }
+  
+  .tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: normal;
+  }
+  
+  .tab-button.active {
+    font-weight: bold;
+  }
+  
+  .chat-list {
+    /* min-height: 150px; 최소 높이를 더 키워 스크롤 문제 해결 */
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+    scrollbar-width: none; /* 스크롤바 숨김 */
+    padding: 0;
+  }
+  
+  .chat-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .chat-room {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    cursor: pointer;
+    min-height: 80px;
+  }
+  
+  .chat-room:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .chat-info {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .chat-room-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .last-message {
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .chat-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative; /* 개별 드롭다운 위치를 기준으로 함 */
+  }
+  
+  .unread-badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .time {
+    color: gray;
+    font-size: 12px;
+  }
+  
+  /* 전체 및 개별 채팅방의 드롭다운 메뉴 스타일을 통일 */
+  .dropdown-menu{
+    position: absolute;
+    top: 100%; /* 부모 요소 바로 아래에 위치하도록 수정 */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 150px; /* 드롭다운의 최소 너비 설정 */
+    padding: 10px; /* 메뉴 내부의 padding을 설정 */
+    display: none; /* 기본적으로 숨김 처리 */
+    z-index: 9999; /* 드롭다운 클릭 가능하게 우선순위 높임 */
+  }
+  
+  .room-dropdown {
+    position: absolute;
+    top: 40px; /* 드롭다운이 버튼 바로 아래에 표시되도록 조정 */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    padding: 10px;
+    z-index: 1000; /* 드롭다운이 상위로 오도록 */
+  }
+  
+  .dropdown-menu.open {
+    display: block; /* 열릴 때 표시 */
+    z-index: 9999;
+  }
+  
+  .room-dropdown.open {
+    display: block;
+    z-index: 9999; /* 클릭 가능하게 우선순위를 높임 */
+  }
+  
+  /* 드롭다운 아이템 스타일 */
+  .dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }

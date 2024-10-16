@@ -1,0 +1,47 @@
+.chat-container {
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.sidebar-container{
+    width: 100%;
+}
+
+.chatroom-container {
+    width: 75%;
+    height: 93.5%;
+    position: absolute;
+    top: 5.5%;
+    right: 0;
+    left: 52%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.chatroom-container.visible {
+    transform: translateX(0);
+}
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.grey-logo {
+    width: 300px;
+    left: 65%;
+    top: 40%;
+    position: absolute;
+    transform: translateX(0%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.grey-logo.visible{
+    transform: translateX(100%);
+}
